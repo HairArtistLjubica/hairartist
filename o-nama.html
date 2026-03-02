@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="sr-RS">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O nama | Hair Artist Ljubica</title>
+  <meta name="description" content="Hair Artist studio – spoj stručnosti, nege i estetike. Specijalizovani za moderne kolor tehnike i tretmane dubinske regeneracije kose.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="stylesheet" href="CSS/o-nama.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+
+    <button class="menu-btn" aria-label="Otvori meni" aria-controls="menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu-content" role="dialog" aria-modal="true" aria-label="Glavni meni">
+    <button class="close-menu" aria-label="Zatvori meni">×</button>
+    <a href="index.php">Početna</a>
+    <a href="o-nama.html" aria-current="page">O nama</a>
+    <a href="zakazivanje.php">Zakazivanje</a>
+    <a href="cenovnik.html">Cenovnik</a>
+    <a href="https://cartella.rs/blog" target="_blank" rel="noopener">Blog</a>
+  </div>
+</nav>
+
+<main class="about-wrapper">
+
+  <section class="hero container">
+    <h1 class="title">O NAMA</h1>
+    <p class="lead">
+      U Hair Artist studiju verujemo da prava lepota kose počinje njenim zdravljem — zato svaki naš rad
+      predstavlja spoj stručnosti, nege i vrhunske estetike.
+    </p>
+  </section>
+
+  <section class="content container">
+
+    <div class="card">
+      <p>
+        Pored klasičnih usluga u salonu, specijalizovani smo za moderne kolor tehnike i tretmane dubinske
+        regeneracije kose. Naš cilj nije samo promena boje ili frizure, već stvaranje dugoročnog kvaliteta kose
+        i rezultata koji će trajati.
+      </p>
+      <p>
+        Kombinujemo napredne tehnike kolora sa profesionalnim tretmanima nege kako bismo kosi obezbedili
+        maksimalnu zaštitu. Verujemo da zdrava kosa nije trend — već standard.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="panel">
+        <h2>STRUČAN TIM I KONTINUIRANO USAVRŠAVANJE</h2>
+        <p>
+          Hair Artist čini stručno edukovan tim koji radi pod stalnim nadzorom Ljubice Stepančev, što garantuje
+          ujednačen kvalitet usluge i visok profesionalni standard rada.
+        </p>
+        <p>
+          Pored tehnika po kojima smo prepoznatljivi, naš tim čine profesionalci specijalizovani za šišanje,
+          stilizovanje i svečane frizure, omogućavajući klijentima da na jednom mestu dobiju kompletnu i
+          vrhunsku uslugu.
+        </p>
+        <p>
+          Kontinuirana edukacija, praćenje savremenih metoda nege i usvajanje novih tehnologija deo su naše
+          svakodnevne prakse, jer verujemo da se vrhunski rezultati postižu stalnim usavršavanjem.
+        </p>
+      </article>
+
+      <aside class="panel panel-accent">
+        <h2>MOJA PRIČA</h2>
+        <p>
+          Ja sam Ljubica Stepančev — hair artist čiji je životni put neraskidivo vezan za frizersku profesiju.
+          Od najranijeg detinjstva bila sam okružena salonskim okruženjem i porodičnom tradicijom frizerskog
+          zanata, gde sam veoma rano razvila osećaj za estetiku, detalj i odnos sa klijentima.
+        </p>
+        <p>
+          Aktivno se ovim poslom bavim više od deset godina, tokom kojih kontinuirano usavršavam svoje znanje
+          kroz edukacije, praćenje savremenih trendova i usvajanje naprednih tehnika u oblasti koloracije i
+          regeneracije kose.
+        </p>
+        <p>
+          Vođena velikom ljubavlju prema nezi kose i željom da klijentima pružim dugoročan kvalitet, razvila sam
+          sopstveni pristup koji objedinjuje inovativnu negu, precizne tehnike i duboko razumevanje zdravlja
+          dlake. Iz iste filozofije nastao je i moj profesionalni brend Cartella, čiji se proizvodi danas koriste i
+          prodaju širom Evropske unije.
+        </p>
+      </aside>
+    </div>
+
+    <div class="cta">
+      <p>
+        Moj cilj nije samo vizuelna transformacija, već stvaranje kose koja izgleda luksuzno, prirodno i dugotrajno zdravo.
+      </p>
+      <a class="cta-btn" href="zakazivanje.php">Zakažite termin</a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Hair Artist Ljubica</span>
+  </div>
+</footer>
+
+<script>
+  // godina
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // hamburger (premium + accessible)
+  const menu = document.getElementById("menu");
+  const openBtn = document.querySelector(".menu-btn");
+  const closeBtn = document.querySelector(".close-menu");
+
+  function openMenu(){
+    menu.classList.add("active");
+    menu.setAttribute("aria-hidden","false");
+    openBtn.setAttribute("aria-expanded","true");
+    document.body.style.overflow = "hidden";
+  }
+  function closeMenu(){
+    menu.classList.remove("active");
+    menu.setAttribute("aria-hidden","true");
+    openBtn.setAttribute("aria-expanded","false");
+    document.body.style.overflow = "";
+  }
+
+  openBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  menu.addEventListener("click", (e) => { if(e.target === menu) closeMenu(); });
+  document.addEventListener("keydown", (e) => { if(e.key === "Escape" && menu.classList.contains("active")) closeMenu(); });
+</script>
+
+</body>
+</html>

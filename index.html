@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="sr-RS">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naziv Salona | Profesionalni frizerski salon</title>
+  <meta name="description" content="Profesionalni frizerski salon sa dugogodišnjim iskustvom. Zakazivanje termina online. Posetite nas i uverite se u kvalitet.">
+  <meta name="robots" content="index,follow">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <button class="menu-btn" aria-label="Otvori meni">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="menu" id="menu">
+  <div class="menu-content">
+    <button class="close-menu">×</button>
+    <a href="cenovnik.html">Cenovnik</a>
+    <a href="nasa-prodaja.html">Shop</a>
+    <a href="o-nama.html">O nama</a>
+    <a href="zakazivanje.html">Zakazivanje</a>
+    <a href="edukacija.html">Edukacija</a>
+    <a href="https://cartella.rs/blog.php" target="_blank">Blog</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+<div class="logo">
+  <img 
+    src="IMG/logo-removebg-preview.png" 
+    alt="Hair Artist Ljubica Stepancev – profesionalni frizerski salon"
+    width="800"
+    height="300"
+    loading="eager"
+  >
+</div>
+
+
+  <a href="zakazivanje.html" class="btn-primary">
+    Zakažite termin
+  </a>
+</section>
+
+<div class="divider"></div>
+
+<!-- KONTAKT PODACI + MAPA -->
+<section class="contact-section">
+
+  <div class="container">
+
+    <h1 class="contact-title">KONTAKT</h1>
+
+    <div class="contact-grid">
+
+      <!-- LEVA STRANA – PODACI -->
+      <div class="contact-info">
+
+        <div class="info-item">
+          <span>Instagram</span>
+          <a href="https://www.instagram.com/hair.artist.ljubica/" target="_blank">@hairartistljubica</a>
+        </div>
+
+        <div class="info-item">
+          <span>Email</span>
+          <a href="mailto:hairartist@email.com">hairartist@email.com</a>
+        </div>
+
+        <div class="info-item">
+          <span>Telefon</span>
+          <a href="tel:+3816XXXXXXX">+381 6X XXX XXXX</a>
+        </div>
+
+        <div class="info-item">
+          <span>Adresa</span>
+          <p>Vranjska 8, Beograd</p>
+        </div>
+
+      </div>
+
+      <!-- DESNA STRANA – FORMA -->
+      <div class="contact-form">
+
+        <form id="questionForm">
+          <input type="text" name="name" placeholder="Ime i prezime" required>
+          <input type="email" name="email" placeholder="Email adresa" required>
+          <textarea name="message" placeholder="Vaše pitanje..." required></textarea>
+          <button type="submit" class="btn-primary">Pošalji poruku</button>
+        </form>
+
+        <div class="form-status"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MAPA -->
+<section class="map-section">
+  <iframe 
+    src="https://yandex.com/map-widget/v1/?text=Vranjska%208%20Beograd&z=19"
+    loading="lazy">
+  </iframe>
+</section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span>Hair Artist Ljubica Stepancev</span>
+  </div>
+</footer>
+
+<script src="JS/app.js"></script>
+</body>
+</html>
